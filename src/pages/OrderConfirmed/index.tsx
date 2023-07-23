@@ -39,6 +39,17 @@ export function OrderConfirmedPage() {
               </RegularText>
             }
           />
+          <InfoWithIcon 
+            icon={<MapPin weight="fill" />}
+            iconBg={colors["brand-yellow"]}
+            text={
+              <RegularText>
+                Pagamento na entrega
+                <br />
+                <strong>Cartão de Crédito</strong>
+              </RegularText>
+            }
+          />
         </OrderDetailsContainer>
 
         <img src={confirmedOrderIllustration} alt="" />

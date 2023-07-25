@@ -12,8 +12,6 @@ interface QuantityInputProps {
 export function QuantityInput({ onIncrease, onDecrease, quantity, size = 'medium' }:QuantityInputProps) {
   return (
     <QuantityInputContainer size={size} >
-      
-      {/* disabled Minus button */}
       <IconWrapper disabled={quantity <= 1} onClick={onDecrease} >
         <Minus size={14} weight="fill" />
       </IconWrapper>

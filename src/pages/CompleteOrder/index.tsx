@@ -7,7 +7,7 @@ import { useForm, FormProvider } from "react-hook-form";
 import { CompleteOrderContainer } from "./styles";
 
 const confirmOrderFormValidationSchema = zod.object({
-  cep: zod.string()
+  cep: zod.string().min(1, "Informe o CEP")
 })
 
 export type OrderData = zod.infer<typeof confirmOrderFormValidationSchema >

@@ -10,13 +10,25 @@ const confirmOrderFormValidationSchema = zod.object({
   cep: zod.string()
 })
 
+export type OrderData = zod.infer<typeof confirmOrderFormValidationSchema >
+
+type ConfirmOrderFormData = OrderData;
+
 export function CompleteOrderPage() {
-  const confirmOrderForm = useForm({
+  const confirmOrderForm = useForm<ConfirmOrderFormData>({
     resolver: zodResolver(confirmOrderFormValidationSchema)
   });
+
+  const { handleSubmit } = confirmOrderForm;
+
+  function handleConfirmOrder(data: ConfirmOrderFormData) {
+    console.log(data);
+    
+  }
+
   return (
     <FormProvider {...confirmOrderForm}>
-      <CompleteOrderContainer className="container" >
+      <CompleteOrderContainer className="container" onSubmit={handleSubmit(handleConfirmOrder)} >
         <CompleteOrderForm />
         <SelectedCoffees />
       </CompleteOrderContainer>

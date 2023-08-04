@@ -1,8 +1,10 @@
-import { CompleteOrderForm } from "./components/CompleteOrderForm";
-import { SelectedCoffees } from "./components/SelectedCoffees";
 import * as zod from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, FormProvider } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+
+import { CompleteOrderForm } from "./components/CompleteOrderForm";
+import { SelectedCoffees } from "./components/SelectedCoffees";
 
 import { CompleteOrderContainer } from "./styles";
 
@@ -38,9 +40,12 @@ export function CompleteOrderPage() {
 
   const { handleSubmit } = confirmOrderForm;
 
+  const navigate = useNavigate();
+
   function handleConfirmOrder(data: ConfirmOrderFormData) {
-    console.log(data);
-    
+    navigate("/orderConfirmed", {
+      state: data
+    })
   }
 
   return (

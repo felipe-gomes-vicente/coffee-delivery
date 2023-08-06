@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const OurCoffeesContainer = styled.section`
   width: 100%;
   margin-top: 2rem;
-`;
+`
 
 export const CoffeeList = styled.div`
   width: 100%;
@@ -12,4 +12,4 @@ export const CoffeeList = styled.div`
   column-gap: 2rem;
   row-gap: 2.5rem;
   margin-top: 3.5rem;
-`;
+`

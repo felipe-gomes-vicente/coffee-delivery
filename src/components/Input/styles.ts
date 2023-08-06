@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
 export const InputWrapper = styled.div`
   display: flex;
@@ -7,19 +7,19 @@ export const InputWrapper = styled.div`
   position: relative;
 
   > p {
-    color: ${({ theme }) => theme.colors["base-error"]};
+    color: ${({ theme }) => theme.colors['base-error']};
   }
-`;
+`
 
 interface InputContainerProps {
-  hasError: boolean;
+  hasError: boolean
 }
 
 export const InputStyleContainer = styled.div<InputContainerProps>`
   height: 2.625rem;
   border-radius: 4px;
-  border: 1px solid ${({ theme }) => theme.colors["base-button"]};
-  background: ${({ theme }) => theme.colors["base-input"]};
+  border: 1px solid ${({ theme }) => theme.colors['base-button']};
+  background: ${({ theme }) => theme.colors['base-input']};
   display: flex;
   align-items: center;
   transition: 0.4s;
@@ -29,15 +29,15 @@ export const InputStyleContainer = styled.div<InputContainerProps>`
   overflow: hidden;
 
   &:focus-within {
-    border-color: ${({ theme }) => theme.colors["brand-yellow-dark"]};
+    border-color: ${({ theme }) => theme.colors['brand-yellow-dark']};
   }
 
   ${({ theme, hasError }) =>
     hasError &&
     css`
-      border-color: ${theme.colors["base-error"]};
+      border-color: ${theme.colors['base-error']};
     `}
-`;
+`
 
 export const InputStyled = styled.input`
   flex: 1;
@@ -46,16 +46,16 @@ export const InputStyled = styled.input`
   padding: 0 0.75rem;
   height: 100%;
   font-size: 0.75rem;
-  color: ${({ theme }) => theme.colors["base-text"]};
+  color: ${({ theme }) => theme.colors['base-text']};
 
   &::placeholder {
-    color: ${({ theme }) => theme.colors["base-label"]};
+    color: ${({ theme }) => theme.colors['base-label']};
   }
-`;
+`
 
 export const RightText = styled.p`
   font-size: 0.75rem;
   margin-right: 0.75rem;
   font-style: italic;
-  color: ${({ theme }) => theme.colors["base-label"]};
-`;
+  color: ${({ theme }) => theme.colors['base-label']};
+`

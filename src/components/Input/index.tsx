@@ -1,17 +1,17 @@
-import { forwardRef, InputHTMLAttributes } from "react";
-import { RegularText } from "../Typography";
+import { forwardRef, InputHTMLAttributes } from 'react'
+import { RegularText } from '../Typography'
 
 import {
   InputWrapper,
   InputStyleContainer,
   InputStyled,
   RightText,
-} from "./styles";
+} from './styles'
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
-  error?: string;
-  rightText?: string;
-};
+  error?: string
+  rightText?: string
+}
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ error, rightText, className, ...props }, ref) => {
@@ -23,6 +23,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         </InputStyleContainer>
         {error && <RegularText size="s">{error}</RegularText>}
       </InputWrapper>
-    );
-  }
-);
+    )
+  },
+)
+
+// Component definition is missing display name  react/display-name
+Input.displayName = 'Input'

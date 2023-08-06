@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import { RegularText, TitleText } from "../../../../components/Typography";
+import styled from 'styled-components'
+import { RegularText, TitleText } from '../../../../components/Typography'
 
 export const CoffeeCardContainer = styled.div`
   width: 100%;
-  background: ${({ theme }) => theme.colors["base-card"]};
+  background: ${({ theme }) => theme.colors['base-card']};
   border-radius: 6px 36px 6px 36px;
   padding: 1.25rem;
   padding-top: 0;
@@ -17,7 +17,7 @@ export const CoffeeCardContainer = styled.div`
     height: 7.5rem;
     margin-top: -1.25rem;
   }
-`;
+`
 
 export const Tags = styled.div`
   width: 100%;
@@ -30,30 +30,30 @@ export const Tags = styled.div`
   flex-wrap: wrap;
 
   span {
-    background: ${({ theme }) => theme.colors["brand-yellow-light"]};
-    color: ${({ theme }) => theme.colors["brand-yellow-dark"]};
-    font-size: ${({ theme }) => theme.textSizes["components-tag"]};
+    background: ${({ theme }) => theme.colors['brand-yellow-light']};
+    color: ${({ theme }) => theme.colors['brand-yellow-dark']};
+    font-size: ${({ theme }) => theme.textSizes['components-tag']};
     text-transform: uppercase;
     padding: 0.25rem 0.5rem;
     border-radius: 999px;
     font-weight: 700;
   }
-`;
+`
 
 export const Name = styled(TitleText).attrs({
-  size: "s",
-  color: "subtitle",
+  size: 's',
+  color: 'subtitle',
 })`
   font-weight: 700;
   margin-bottom: 0.5rem;
-`;
+`
 
 export const Description = styled(RegularText).attrs({
-  size: "s",
-  color: "label",
+  size: 's',
+  color: 'label',
 })`
   margin-bottom: 2rem;
-`;
+`
 
 export const CardFooter = styled.div`
   width: 100%;
@@ -70,7 +70,7 @@ export const CardFooter = styled.div`
       line-height: 0.75rem;
     }
   }
-`;
+`
 
 export const AddCartWrapper = styled.div`
   width: 7.5rem;
@@ -82,14 +82,14 @@ export const AddCartWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: ${({ theme }) => theme.colors["brand-purple-dark"]};
-    color: ${({ theme }) => theme.colors["base-card"]};
+    background: ${({ theme }) => theme.colors['brand-purple-dark']};
+    color: ${({ theme }) => theme.colors['base-card']};
     border-radius: 6px;
     margin-left: 0.3rem;
     transition: 0.4s;
 
     &:hover {
-      background: ${({ theme }) => theme.colors["brand-purple"]};
+      background: ${({ theme }) => theme.colors['brand-purple']};
     }
   }
-`;
+`

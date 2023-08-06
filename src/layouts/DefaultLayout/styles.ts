@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const LayoutContainer = styled.div`
   .container {
@@ -7,4 +7,4 @@ export const LayoutContainer = styled.div`
     margin-right: auto;
     margin-left: auto;
   }
-`;
+`

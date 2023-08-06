@@ -1,57 +1,62 @@
-import { MapPin } from "phosphor-react";
-import { useTheme } from "styled-components";
-import { useLocation, useNavigate } from "react-router-dom";
+import { MapPin } from 'phosphor-react'
+import { useTheme } from 'styled-components'
+import { useLocation, useNavigate } from 'react-router-dom'
 
-import { RegularText, TitleText } from "../../components/Typography";
-import confirmedOrderIllustration from "../../assets/confirmed-order.svg";
-import { InfoWithIcon } from "../../components/InfoWithIcon";
-import { OrderData } from "../CompleteOrder";
-import { paymentMethods } from "../CompleteOrder/components/CompleteOrderForm/PaymentMethodOptions";
+import { RegularText, TitleText } from '../../components/Typography'
+import confirmedOrderIllustration from '../../assets/confirmed-order.svg'
+import { InfoWithIcon } from '../../components/InfoWithIcon'
+import { OrderData } from '../CompleteOrder'
+import { paymentMethods } from '../CompleteOrder/components/CompleteOrderForm/PaymentMethodOptions'
 
-import { OrderConfirmedContainer, OrderDetailsContainer } from "./styles";
-import { useEffect } from "react";
+import { OrderConfirmedContainer, OrderDetailsContainer } from './styles'
+import { useEffect } from 'react'
 
 interface LocationType {
-  state: OrderData;
+  state: OrderData
 }
 
 export function OrderConfirmedPage() {
-  const { colors } = useTheme();
+  const { colors } = useTheme()
 
-  const { state } = useLocation() as unknown as LocationType;
+  const { state } = useLocation() as unknown as LocationType
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   useEffect(() => {
-    if(!state) {
-      navigate("/")
+    if (!state) {
+      navigate('/')
     }
-  }, [])
+  }, [state, navigate])
 
-  if(!state) return <></>
+  if (!state) return <></>
 
   return (
     <OrderConfirmedContainer className="container">
-      <TitleText size="l" >Uhu! Pedido confirmado</TitleText>
-      <RegularText size="l" color="subtitle" >Agora é só aguardar que logo o café chegará até você</RegularText>
+      <TitleText size="l">Uhu! Pedido confirmado</TitleText>
+      <RegularText size="l" color="subtitle">
+        Agora é só aguardar que logo o café chegará até você
+      </RegularText>
 
       <section>
         <OrderDetailsContainer>
-          <InfoWithIcon 
+          <InfoWithIcon
             icon={<MapPin weight="fill" />}
-            iconBg={colors["brand-purple"]}
+            iconBg={colors['brand-purple']}
             text={
               <RegularText>
-                Entrega em <strong>{state.street}, {state.number} </strong>
+                Entrega em{' '}
+                <strong>
+                  {state.street}, {state.number}{' '}
+                </strong>
                 <br />
                 {state.district} - {state.city}, {state.uf}
               </RegularText>
             }
           />
 
-          <InfoWithIcon 
+          <InfoWithIcon
             icon={<MapPin weight="fill" />}
-            iconBg={colors["brand-yellow"]}
+            iconBg={colors['brand-yellow']}
             text={
               <RegularText>
                 Previsão de entrega
@@ -60,9 +65,9 @@ export function OrderConfirmedPage() {
               </RegularText>
             }
           />
-          <InfoWithIcon 
+          <InfoWithIcon
             icon={<MapPin weight="fill" />}
-            iconBg={colors["brand-yellow"]}
+            iconBg={colors['brand-yellow']}
             text={
               <RegularText>
                 Pagamento na entrega

@@ -1,9 +1,9 @@
-import { css, styled } from "styled-components";
+import { css, styled } from 'styled-components'
 
 export const HeaderContainer = styled.header`
   width: 100%;
   height: 6.5rem;
-  background: ${({ theme }) => theme.colors["base-background"]};
+  background: ${({ theme }) => theme.colors['base-background']};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,17 +16,16 @@ export const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-
   }
 `
 
 export const HeaderButtonsContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: .75rem;
+  gap: 0.75rem;
 `
 interface HeaderButtonProps {
-  variant: "purple" | "yellow";
+  variant: 'purple' | 'yellow'
 }
 
 export const HeaderButton = styled.button<HeaderButtonProps>`
@@ -41,9 +40,9 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
   padding: 0 0.5rem;
   position: relative;
   cursor: inherit;
-  font-size: ${({ theme }) => theme.textSizes["text-regular-s"]};
+  font-size: ${({ theme }) => theme.textSizes['text-regular-s']};
   cursor: inherit;
-  
+
   span {
     position: absolute;
     width: 1.25rem;
@@ -51,12 +50,12 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
     border-radius: 50%;
     top: calc(-1.25rem / 2);
     right: calc(-1.25rem / 2);
-    color: ${({ theme }) => theme.colors["base-white"]};
+    color: ${({ theme }) => theme.colors['base-white']};
 
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: .75rem;
+    font-size: 0.75rem;
     font-weight: 700;
   }
 
@@ -69,12 +68,11 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
     }
   `}
 
-  ${({ variant, theme }) => 
-  variant === 'purple' && 
-  css`
-    svg {
-      color: ${theme.colors["brand-purple"]};
-    }
-  `}
-
+  ${({ variant, theme }) =>
+    variant === 'purple' &&
+    css`
+      svg {
+        color: ${theme.colors['brand-purple']};
+      }
+    `}
 `

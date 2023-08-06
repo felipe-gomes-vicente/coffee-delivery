@@ -1,13 +1,16 @@
-import { InputHTMLAttributes, ReactNode, forwardRef } from "react";
+import { InputHTMLAttributes, ReactNode, forwardRef } from 'react'
 
-import { ContentContainer, PaymentMethodContainer } from "./styles";
+import { ContentContainer, PaymentMethodContainer } from './styles'
 
 export type PaymentMethodInputProps = InputHTMLAttributes<HTMLInputElement> & {
-  icon: ReactNode;
+  icon: ReactNode
   label: string
 }
 
-export const PaymentMethodInput = forwardRef<HTMLInputElement, PaymentMethodInputProps>(({ id, icon, label, ...props }, ref) => {
+export const PaymentMethodInput = forwardRef<
+  HTMLInputElement,
+  PaymentMethodInputProps
+>(({ id, icon, label, ...props }, ref) => {
   return (
     <PaymentMethodContainer>
       <input type="radio" id={id} {...props} name="paymentMethod" ref={ref} />
@@ -18,5 +21,7 @@ export const PaymentMethodInput = forwardRef<HTMLInputElement, PaymentMethodInpu
         </ContentContainer>
       </label>
     </PaymentMethodContainer>
-  );
+  )
 })
+// Component definition is missing display name  react/display-name
+PaymentMethodInput.displayName = 'PaymentMethodInput'

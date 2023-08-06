@@ -1,19 +1,23 @@
-import { Trash } from "phosphor-react";
+import { Trash } from 'phosphor-react'
 
-import { QuantityInput } from "../../../../components/QuantityInput";
-import { RegularText } from "../../../../components/Typography";
-import { CartItem } from "../../../../contexts/CartContext";
-import { formatMoney } from "../../../../utils/formatMoney";
-import { useCart } from "../../../../hooks/useCart";
+import { QuantityInput } from '../../../../components/QuantityInput'
+import { RegularText } from '../../../../components/Typography'
+import { CartItem } from '../../../../contexts/CartContext'
+import { formatMoney } from '../../../../utils/formatMoney'
+import { useCart } from '../../../../hooks/useCart'
 
-import { ActionsContainer, CoffeeCartCardContainer, RemoveButton } from "./styles";
+import {
+  ActionsContainer,
+  CoffeeCartCardContainer,
+  RemoveButton,
+} from './styles'
 
 interface CoffeeCartCardProps {
   coffee: CartItem
 }
 
-export function CoffeeCartCard({ coffee }:CoffeeCartCardProps) {
-  const { changeCartItemQuantity, removeCartItem } = useCart();
+export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
+  const { changeCartItemQuantity, removeCartItem } = useCart()
 
   function handleIncrease() {
     changeCartItemQuantity(coffee.id, 'increase')
@@ -27,9 +31,9 @@ export function CoffeeCartCard({ coffee }:CoffeeCartCardProps) {
     removeCartItem(coffee.id)
   }
 
-  const coffeeTotal = coffee.price * coffee.quantity;
-  const formattedPrice = formatMoney(coffeeTotal);
-  
+  const coffeeTotal = coffee.price * coffee.quantity
+  const formattedPrice = formatMoney(coffeeTotal)
+
   return (
     <CoffeeCartCardContainer>
       <div>
@@ -37,11 +41,11 @@ export function CoffeeCartCard({ coffee }:CoffeeCartCardProps) {
         <div>
           <RegularText color="subtitle">{coffee.name}</RegularText>
           <ActionsContainer>
-            <QuantityInput 
-              size="small" 
-              onIncrease={handleIncrease} 
-              onDecrease={handleDecrease}  
-              quantity={coffee.quantity} 
+            <QuantityInput
+              size="small"
+              onIncrease={handleIncrease}
+              onDecrease={handleDecrease}
+              quantity={coffee.quantity}
             />
             <RemoveButton onClick={handleRemove}>
               <Trash size={16} />

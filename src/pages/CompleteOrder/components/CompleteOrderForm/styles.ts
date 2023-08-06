@@ -1,18 +1,18 @@
-import styled from "styled-components";
-import { SectionBaseStyle } from "../../styles";
+import styled from 'styled-components'
+import { SectionBaseStyle } from '../../styles'
 
 export const CompleteOrderFormContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   width: 40rem;
-`;
+`
 
 export const FormSectionContainer = styled(SectionBaseStyle)`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-`;
+`
 
 export const AddressFormContainer = styled.div`
   width: 100%;
@@ -34,7 +34,7 @@ export const AddressFormContainer = styled.div`
   .complement {
     grid-column: span 2;
   }
-`;
+`
 
 export const PaymentMethodOptionsContainer = styled.div`
   display: grid;
@@ -43,6 +43,6 @@ export const PaymentMethodOptionsContainer = styled.div`
 
   > p {
     grid-column: span 3;
-    color: ${({ theme }) => theme.colors["base-error"]};
+    color: ${({ theme }) => theme.colors['base-error']};
   }
-`;
+`

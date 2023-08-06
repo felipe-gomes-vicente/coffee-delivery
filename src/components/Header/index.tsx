@@ -1,16 +1,16 @@
-import { MapPin, ShoppingCart } from "phosphor-react";
-import { NavLink } from "react-router-dom";
+import { MapPin, ShoppingCart } from 'phosphor-react'
+import { NavLink } from 'react-router-dom'
 
 import coffeeLogoImg from '../../assets/coffee-delivery-logo.svg'
-import { useCart } from "../../hooks/useCart";
+import { useCart } from '../../hooks/useCart'
 
-import { HeaderButton, HeaderButtonsContainer, HeaderContainer } from "./styles";
+import { HeaderButton, HeaderButtonsContainer, HeaderContainer } from './styles'
 
 export function Header() {
-  const { cartQuantity } = useCart();
+  const { cartQuantity } = useCart()
   return (
     <HeaderContainer>
-      <div className='container' >
+      <div className="container">
         <NavLink to="/">
           <img src={coffeeLogoImg} alt="" />
         </NavLink>

@@ -15,9 +15,20 @@ Watch it in action Deploy: [Click Here](https://coffee-delivery-web.netlify.app)
 What was developed:
 
 - Logic and Algorithms with Javascript;
-- Creation Logic and Algorithms with Javascript;
 - Deploy Front end Netlify;
 - Advancing in WEB Programming with ReactJS and Javascript;
+- Routes;
+- components;
+- Props;
+- hooks;
+- context;
+- User can see a list of available coffees
+- User can add an item to cart
+- User can remove an item from cart
+- User can increase/decrease a single item quantity in the cart
+- User can see the quantity of a given product in the cart, in the header, without navigating to the checkout page
+- User can finish an order
+- User can't place an order without passing an address
 - Vite is a new breed of frontend build tool that significantly improves the 
 frontend development experience;
 - Include popular icons in my React projects easily with react-icons; 
@@ -27,11 +38,6 @@ frontend development experience;
 - Working with colors and fonts;
 - Applying spacing, aligning and positioning text and elements;
 - File system structure of the project separated by folder;  
-- Routes;
-- components;
-- Props;
-- hooks;
-- context;
 <br />
 
 ## 🧪 Tools

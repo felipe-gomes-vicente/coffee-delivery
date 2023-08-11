@@ -8,6 +8,7 @@
 
 ### 💻 Coffee Delivery
 
+ This is a project made entirely in React of an E-commerce Coffee sales site to improve concepts such as Context API, Router, form validation through React-hook-form and Zod and Styled Components for styling.
  The application has three screens, the first being a presentation screen and also listing the available coffees. On the second screen, the user needs to fill out a form with his address data and on the right side it is possible to view the items in the cart, being able to change the quantity or remove it. On the third and final screen, an order confirmation is displayed and also the delivery details of the purchase.
 
 Watch it in action Deploy: [Click Here](https://coffee-delivery-web.netlify.app)
@@ -15,9 +16,20 @@ Watch it in action Deploy: [Click Here](https://coffee-delivery-web.netlify.app)
 What was developed:
 
 - Logic and Algorithms with Javascript;
-- Creation Logic and Algorithms with Javascript;
 - Deploy Front end Netlify;
 - Advancing in WEB Programming with ReactJS and Javascript;
+- Routes;
+- components;
+- Props;
+- hooks;
+- context;
+- User can see a list of available coffees
+- User can add an item to cart
+- User can remove an item from cart
+- User can increase/decrease a single item quantity in the cart
+- User can see the quantity of a given product in the cart, in the header, without navigating to the checkout page
+- User can finish an order
+- User can't place an order without passing an address
 - Vite is a new breed of frontend build tool that significantly improves the 
 frontend development experience;
 - Include popular icons in my React projects easily with react-icons; 
@@ -27,11 +39,6 @@ frontend development experience;
 - Working with colors and fonts;
 - Applying spacing, aligning and positioning text and elements;
 - File system structure of the project separated by folder;  
-- Routes;
-- components;
-- Props;
-- hooks;
-- context;
 <br />
 
 ## 🧪 Tools
@@ -45,7 +52,8 @@ Application developed using the following tools:
 - Context API
 - React Router Dom
 - React Hook Form
-- Validações de formulário com Zod
+- Form validations with Zod
+- ESLint
   
   <br />
   

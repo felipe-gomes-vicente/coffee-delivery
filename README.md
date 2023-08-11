@@ -8,6 +8,7 @@
 
 ### 💻 Coffee Delivery
 
+ This is a project made entirely in React of an E-commerce Coffee sales site to improve concepts such as Context API, Router, form validation through React-hook-form and Zod and Styled Components for styling.
  The application has three screens, the first being a presentation screen and also listing the available coffees. On the second screen, the user needs to fill out a form with his address data and on the right side it is possible to view the items in the cart, being able to change the quantity or remove it. On the third and final screen, an order confirmation is displayed and also the delivery details of the purchase.
 
 Watch it in action Deploy: [Click Here](https://coffee-delivery-web.netlify.app)
@@ -51,7 +52,8 @@ Application developed using the following tools:
 - Context API
 - React Router Dom
 - React Hook Form
-- Validações de formulário com Zod
+- Form validations with Zod
+- ESLint
   
   <br />
   
